@@ -88,6 +88,16 @@ class AlienInvasion:
             self.ship.moving_right = True
         elif event.key == pygame.K_LEFT or  event.key == pygame.K_a:
             self.ship.moving_left = True
+        elif event.key == pygame.K_p and self.game_active == True: 
+            self.game_active = False
+            pygame.mouse.set_visible(True)
+        elif event.key == pygame.K_p and self.game_active == False: 
+            self.game_active = True
+            pygame.mouse.set_visible(True)
+        elif event.key == pygame.K_r: 
+            self.game_active = False
+            pygame.mouse.set_visible(True)
+            self.stats.reset_stats()
 
     def _check_keyup(self,event): 
 
@@ -99,7 +109,6 @@ class AlienInvasion:
             sys.exit()
         elif event.key == pygame.K_SPACE:
             self._fire_bullet()
-    
 
     def _check_play_button(self, mouse_pos): 
         
@@ -114,21 +123,26 @@ class AlienInvasion:
             self.bullets.empty()
             self.aliens.empty()
 
-            self._create_fleet()
-            self.ship.center_ship()
-            self.stats.reset_stats()
-            self.sb.prep_score()
-            self.sb.prep_level() 
-            self.sb.prep_ships()
+            self._checks_button()
+
+
+    def _checks_button(self):
+        self._create_fleet()
+        self.ship.center_ship()
+        self.stats.reset_stats()
+        self.sb.prep_score()
+        self.sb.prep_level() 
+        self.sb.prep_ships()
+
 
     def _fire_bullet(self): 
         if len(self.bullets) < self.settings.bullets_allowed:
             new_bullet = Bullet(self)
             self.bullets.add(new_bullet)
     
+
     def _update_bullets(self): 
 
-        
         self.bullets.update()
 
         for bullet in self.bullets.copy(): 
@@ -138,7 +152,6 @@ class AlienInvasion:
         self._check_bullet_alien_collisions()
 
         
-
     def _update_screen(self): 
         # updates events on the screen.  
         
@@ -220,13 +233,16 @@ class AlienInvasion:
             self.sb.prep_score()
             self.sb.check_high_score()
 
+            self._start_new_level()
+            
+    def _start_new_level(self): 
         if not self.aliens: 
             self.bullets.empty()
             self._create_fleet()
             self.settings.increase_speed()
             self.stats.level += 1
             self.sb.prep_level() 
-            
+
 
     def _ship_hit(self): 
         if self.stats.ships_left > 0: 

@@ -8,19 +8,8 @@ Ideas to improve the project
 - buttons that apply different levels of difficulty
 - multiple hits at once does not lead to multiple score increments
 
-
-
-- check out the data visualization chapter and apply to some data. 
-
-to do first: 
-
-- read the end of the book for more ideas. 
-- git for version control read 
-
 To Do to Improve: 
-1. refactoring code
-2. ship can move up and down as well
-3. alien kill count
-4. r button to reset the game
-5. aliens shoot bullets and sound effects. 
-
+1. ship can move up and down as well
+2. alien kill count
+3. as you kill aliens they speed up. 
+4. aliens shoot bullets and sound effects. 

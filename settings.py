@@ -8,8 +8,8 @@ class Settings:
         self.ships_left = 3 
 
         # Bullet Settings
-        self.bullet_width = 4000
-        self.bullet_height = 15 
+        self.bullet_width = 4
+        self.bullet_height = 20 
         self.bullet_color = (60,60,60)
         self.bullets_allowed = 3 
 
@@ -36,7 +36,7 @@ class Settings:
     # defines the dynamic values
         self.ship_speed = 4
         self.bullet_speed = 4
-        self.alien_speed = 10
+        self.alien_speed = 6
 
         self.fleet_direction = 1
 
