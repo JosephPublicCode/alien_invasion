@@ -4,7 +4,6 @@ Ideas to improve the project
 - left side shooter game
 - star class or other objects
 - sideways shooter
-- alien kill count
 - p button to play the game
 - buttons that apply different levels of difficulty
 - multiple hits at once does not lead to multiple score increments
@@ -17,3 +16,11 @@ to do first:
 
 - read the end of the book for more ideas. 
 - git for version control read 
+
+To Do to Improve: 
+1. refactoring code
+2. ship can move up and down as well
+3. alien kill count
+4. r button to reset the game
+5. aliens shoot bullets and sound effects. 
+
