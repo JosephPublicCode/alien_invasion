@@ -88,6 +88,10 @@ class AlienInvasion:
             self.ship.moving_right = True
         elif event.key == pygame.K_LEFT or  event.key == pygame.K_a:
             self.ship.moving_left = True
+        elif event.key == pygame.K_UP or  event.key == pygame.K_w:
+            self.ship.moving_up = True
+        elif event.key == pygame.K_DOWN or  event.key == pygame.K_s:
+            self.ship.moving_down = True
         elif event.key == pygame.K_p and self.game_active == True: 
             self.game_active = False
             pygame.mouse.set_visible(True)
@@ -105,9 +109,13 @@ class AlienInvasion:
             self.ship.moving_right = False
         elif event.key == pygame.K_LEFT or  event.key == pygame.K_a:
             self.ship.moving_left = False
+        elif event.key == pygame.K_UP or  event.key == pygame.K_w:
+            self.ship.moving_up = False
+        elif event.key == pygame.K_DOWN or  event.key == pygame.K_s:
+            self.ship.moving_down = False
         elif event.key == pygame.K_q: 
             sys.exit()
-        elif event.key == pygame.K_SPACE:
+        elif event.key == pygame.K_SPACE and self.game_active == True:
             self._fire_bullet()
 
     def _check_play_button(self, mouse_pos): 
