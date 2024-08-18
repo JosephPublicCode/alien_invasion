@@ -1,15 +1,10 @@
-Ideas to improve the project
 
-- allow the ship to move up and down as well as left and right. 
-- left side shooter game
-- star class or other objects
-- sideways shooter
-- p button to play the game
-- buttons that apply different levels of difficulty
-- multiple hits at once does not lead to multiple score increments
 
 To Do to Improve: 
-1. ship can move up and down as well
-2. alien kill count
-3. as you kill aliens they speed up. 
-4. aliens shoot bullets and sound effects. 
+1. new art style - bmp files and background
+2. global high score - read & write
+3. aliens shoot bullets. 
+4. alien sound effects. 
+5. further code refactoring
+6. background music
+7. user guide on the play screen. 
